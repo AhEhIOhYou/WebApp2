@@ -5,9 +5,9 @@ import (
 	"net/http"
 )
 
-func IndexPage(c *gin.Context) {
-	c.HTML(http.StatusOK, "index.tmpl", gin.H{
-		"title": "Index",
-		"text":  "Приветствую тебя на стартовой странице этого сайта!",
+func Home(c *gin.Context) {
+	c.HTML(http.StatusOK, "home.tmpl", gin.H{
+		"title": "Home",
+		"data":  "Приветствую тебя на стартовой странице этого сайта!",
 	})
 }

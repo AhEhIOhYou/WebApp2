@@ -10,6 +10,7 @@ import (
 func GetStaff(c *gin.Context) {
 
 	staff, err := model.GetAllStaff()
+
 	if err != nil {
 		c.AbortWithError(400, err)
 		log.Fatal(err)

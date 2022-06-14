@@ -16,10 +16,9 @@ func main() {
 }
 
 func routes(r *gin.Engine) {
-	//что следует выполнять при входящих запросах указанного типа и по указанному адресу
-	r.LoadHTMLGlob("app/view/templates/*.tmpl")
-	//router.LoadHTMLFiles("templates/template1.html", "templates/template2.html")
 
-	r.GET("/", controller.IndexPage)
+	r.LoadHTMLGlob("app/view/templates/*.tmpl")
+
+	r.GET("/", controller.Home)
 	r.GET("/staff", controller.GetStaff)
 }
