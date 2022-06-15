@@ -8,6 +8,7 @@ import (
 func Home(c *gin.Context) {
 	c.HTML(http.StatusOK, "home.tmpl", gin.H{
 		"title": "Home",
-		"test":  "Приветствую тебя на стартовой странице этого сайта!",
+		"test":  "aa - home",
+		"text":  "some text- home",
 	})
 }

@@ -24,5 +24,11 @@ func routes(r *gin.Engine) {
 	r.LoadHTMLGlob("app/view/templates/*.tmpl")
 
 	r.GET("/", controller.Home)
+
 	r.GET("/staff", controller.GetStaff)
+	r.GET("/staff:id", controller.GetStaff)
+
+	r.GET("/API-test", controller.Test)
+
+	r.Any("/staff/create", controller.Create)
 }
