@@ -21,14 +21,16 @@ func main() {
 
 func routes(r *gin.Engine) {
 
-	r.LoadHTMLGlob("app/view/templates/*.tmpl")
+	r.LoadHTMLGlob("app/view/*.html")
 
 	r.GET("/", controller.Home)
 
+	//r.GET("/staff", controller.GetStaff)
+	//r.GET("/staff:id", controller.GetStaff)
+	//
+	//r.GET("/API-test", controller.Test)
+
 	r.GET("/staff", controller.GetStaff)
-	r.GET("/staff:id", controller.GetStaff)
+	r.Any("/staff/create", controller.CreateStaff)
 
-	r.GET("/API-test", controller.Test)
-
-	r.Any("/staff/create", controller.Create)
 }

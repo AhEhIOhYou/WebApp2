@@ -1,0 +1,24 @@
+{{template "header" . }}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{ range $value := .dataRows }}
+        <tr>
+            <th>{{ $value.Id }}</th>
+            <td>{{ $value.Name }}</td>
+            <td>
+                <button class="btn btn-light">Редактировать</button>
+                <button class="btn btn-danger">Удалить</button>
+            </td>
+        </tr>
+    {{end}}
+    </tbody>
+</table>
+<button class="btn btn-success">Создать</button>
+{{template "footer"}}

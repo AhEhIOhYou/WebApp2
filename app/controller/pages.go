@@ -6,9 +6,7 @@ import (
 )
 
 func Home(c *gin.Context) {
-	c.HTML(http.StatusOK, "home.tmpl", gin.H{
+	c.HTML(http.StatusOK, "index.html", gin.H{
 		"title": "Home",
-		"test":  "aa - home",
-		"text":  "some text- home",
 	})
 }
