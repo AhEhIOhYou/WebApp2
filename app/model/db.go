@@ -6,8 +6,9 @@ import (
 )
 
 type Field struct {
-	Name string
-	Type string
+	Name     string
+	Type     string
+	HtmlType string
 }
 
 func GetFields(db *sql.DB, table string) ([]Field, error) {
@@ -20,7 +21,7 @@ func GetFields(db *sql.DB, table string) ([]Field, error) {
 	for rows.Next() {
 		var field Field
 
-		if err := rows.Scan(field.Name, &field.Type); err != nil {
+		if err := rows.Scan(&field.Name, &field.Type); err != nil {
 			return fields, fmt.Errorf("%v", err)
 		}
 

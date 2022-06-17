@@ -10,3 +10,16 @@ func Home(c *gin.Context) {
 		"title": "Home",
 	})
 }
+
+func Modal(c *gin.Context) {
+	c.HTML(http.StatusOK, "testmodal.html", gin.H{
+		"title": "AaaLlllol",
+	})
+}
+
+func Modal2(c *gin.Context) {
+	c.HTML(http.StatusOK, "testmodal.html", gin.H{
+		"title":   "AaaLlllol",
+		"success": "true",
+	})
+}

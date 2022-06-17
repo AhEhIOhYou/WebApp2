@@ -33,4 +33,5 @@ func routes(r *gin.Engine) {
 	r.GET("/staff", controller.GetStaff)
 	r.Any("/staff/create", controller.CreateStaff)
 
+	r.GET("/modal", controller.Modal)
 }

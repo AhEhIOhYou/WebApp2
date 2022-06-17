@@ -1,3 +1,15 @@
 {{template "header" . }}
 
+{{ . }}
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/xOmV3xaJncY" title="My Crying is Music to Your Ears feat. Hatsune Miku (lyric video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<form action="/create" method="post">
+{{ range $value := .fields }}
+    <div class="form-floating mb-3">
+        <input type="email" name="{{ $value.Name }}" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">{{ $value.Name }}</label>
+    </div>
+{{end}}
+</form>
+
 {{template "footer"}}
